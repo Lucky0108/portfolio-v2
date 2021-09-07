@@ -16,52 +16,6 @@ const Navbar = () => {
         setActiveNav(activeInnerHTML);
     }
 
-    // On Scroll Nav Box Shadow Function
-    const changeNavBoxShadow = () => {
-        if (window.scrollY >= 100) {
-            setOpenNav(true)
-        } else {
-            setOpenNav(false)
-        }
-    }
-
-    // Change ActiveClassName on scroll Function
-    const changeActiveClassOnScroll = () => {
-        if (window.scrollY < 600) {
-            setActiveNav(" Home ")
-        } else if (window.scrollY > 600 && window.scrollY < 1400) {
-            setActiveNav(" About ")
-            document.querySelector(".about-inner .left").classList.add("fadeInLeft");
-            document.querySelector(".about-inner .right").classList.add("fadeInLeft");
-        } else if (window.scrollY > 1399 && window.scrollY < 3200) {
-            setActiveNav(" Portfolio ")
-        } else if (window.scrollY > 3177.6 && window.scrollY < 3953) {
-            setActiveNav(" Blogs ")
-        } else if (window.scrollY > 3953.1) {
-            setActiveNav(" Contact ")
-        }
-    }
-
-    // Animation Appearance on scroll
-    const animationAppear = () => {
-        if (window.scrollY > 400) {
-            document.querySelector(".about-inner .left").classList.add("fadeInLeft");
-            document.querySelector(".about-inner .right").classList.add("fadeInLeft");
-        }
-        if (window.scrollY > 1150) {
-            document.querySelector(".portfolio-section").classList.add("fadeInDown")
-        }
-        if (window.scrollY > 2129) {
-            document.querySelector(".portfolio-skills").classList.add("fadeInRight");
-        }
-        if (window.scrollY > 2923) {
-            document.querySelector(".blog-list ul").classList.add("fadeInLeft");
-        }
-        if (window.scrollY > 3640) {
-            document.querySelector(".cta-inner").classList.add("fadeInUp");
-        }
-    }
-
     const changeHamburgerDropDown = () => {
         if (!hamburger) {
             setHamburger(true);
@@ -69,18 +23,64 @@ const Navbar = () => {
             setHamburger(false);
         }
     }
-    
+
     React.useEffect(() => {
-        if(window.screen.width < 1040) {
+        if (window.screen.width < 1040) {
             document.querySelector(".about-inner .left").classList.add("fadeInLeft");
             document.querySelector(".about-inner .right").classList.add("fadeInLeft");
         }
-    },[])
 
-    window.addEventListener("scroll", () => {
-        changeNavBoxShadow();
-        changeActiveClassOnScroll();
-        animationAppear();
+        // On Scroll Nav Box Shadow Function
+        const changeNavBoxShadow = () => {
+            if (window.scrollY >= 100) {
+                setOpenNav(true)
+            } else {
+                setOpenNav(false)
+            }
+        }
+
+        // Change ActiveClassName on scroll Function
+        const changeActiveClassOnScroll = () => {
+            if (window.scrollY < 600) {
+                setActiveNav(" Home ")
+            } else if (window.scrollY > 600 && window.scrollY < 1400) {
+                setActiveNav(" About ")
+                document.querySelector(".about-inner .left").classList.add("fadeInLeft");
+                document.querySelector(".about-inner .right").classList.add("fadeInLeft");
+            } else if (window.scrollY > 1399 && window.scrollY < 3200) {
+                setActiveNav(" Portfolio ")
+            } else if (window.scrollY > 3177.6 && window.scrollY < 3953) {
+                setActiveNav(" Blogs ")
+            } else if (window.scrollY > 3953.1) {
+                setActiveNav(" Contact ")
+            }
+        }
+
+        // Animation Appearance on scroll
+        const animationAppear = () => {
+            if (window.scrollY > 400) {
+                document.querySelector(".about-inner .left").classList.add("fadeInLeft");
+                document.querySelector(".about-inner .right").classList.add("fadeInLeft");
+            }
+            if (window.scrollY > 1150) {
+                document.querySelector(".portfolio-section").classList.add("fadeInDown")
+            }
+            if (window.scrollY > 2129) {
+                document.querySelector(".portfolio-skills").classList.add("fadeInRight");
+            }
+            if (window.scrollY > 2923) {
+                document.querySelector(".blog-list ul").classList.add("fadeInLeft");
+            }
+            if (window.scrollY > 3640) {
+                document.querySelector(".cta-inner").classList.add("fadeInUp");
+            }
+        }
+        
+        window.addEventListener("scroll", () => {
+            changeNavBoxShadow();
+            changeActiveClassOnScroll();
+            animationAppear();
+        })
     })
 
     return (
