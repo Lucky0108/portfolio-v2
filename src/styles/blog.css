@@ -1,0 +1,150 @@
+.blog-section {
+    margin-top: 50px;
+    /* margin-top: 80px; */
+    /* padding: 150px 0 90px; */
+}
+
+.blog-section h3, .portfolio-section h3, .portfolio-skills h3 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.blog-list {
+    padding-top: 90px;
+}
+
+.blog-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 -50px;
+    list-style-type: none;
+    padding: 0;
+    opacity: 0;
+}
+
+.blog-list ul li {
+    margin: 0 0 50px;
+    float: left;
+    width: 28.333%;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.blog-list ul li .list-inner {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-list ul li .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-list ul li .image .main {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px;
+    transition: all 1s cubic-bezier(0,0,.1,1);
+}
+
+.blog-list ul li:nth-child(1) .image .main {
+    background-image: url("../images/blog/cover.png");
+}
+
+.blog-list ul li:nth-child(2) .image .main {
+    background-image: url("../images/blog/future-work.jpg");
+}
+
+.blog-list ul li:nth-child(3) .image .main {
+    background-image: url("../images/blog/react.png");
+}
+
+.blog-list ul li .blog-heading h3 {
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 15px;
+    padding-top: 28px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.blog-list ul li .blog-heading p {
+    font-size: 12px;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    color: #767676;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.blog-list ul li:hover .image .main {
+    transform: scale(1.1) rotate(-3deg); 
+}
+
+.blog-modal-content .description-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-modal-content .description-wrap h1 {
+    text-align: center;
+    font-size: 32px;
+    position: relative;
+}
+
+.blog-modal-content .description-wrap p, .blog-modal-content .description-wrap ul {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    /* margin: 32px 0; */
+    color: #000;
+}
+
+.blog-modal-content .description-wrap span {
+    font-weight: bolder;
+}
+
+.blog-modal-content .description-wrap img {
+    max-width: 100%;
+    max-height: 500px;
+    margin: 32px auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:300px) {
+    .blog-list ul li .image .main {
+        padding: 100px;
+    }
+}
+
+@media (max-width:772px) {
+    .blog-modal-content .description-wrap h1 {
+        font-size: 20px;
+    }
+
+    .blog-modal-content .description-wrap p, .blog-modal-content .description-wrap ul {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 867px) {
+    .blog-list ul li {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .blog-list {
+        padding-top: 35px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .blog-list ul li {
+        width: 44%;
+    }
+}

@@ -1,0 +1,372 @@
+/* Portfolio Gallery */
+.portfolio-section {
+  background-color: #f9f9f9;
+  padding: 150px 0 100px;
+  opacity: 0;
+}
+
+.portfolio-wrap {
+  position: relative;
+}
+
+.portfolio-filter ul.react-tabs__tab-list {
+  position: absolute;
+  right: 0;
+  top: 65px;
+  margin: 0;
+  border: none;
+  list-style-type: none;
+}
+
+.portfolio-filter ul.react-tabs__tab-list li {
+  padding: 0 10px;
+  color: #000;
+  border: none;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.portfolio-filter ul.react-tabs__tab-list li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.portfolio-filter ul.react-tabs__tab-list li.react-tabs__tab--selected {
+  background-color: #000;
+  color: #fff;
+  border-radius: 0;
+}
+
+.portfolio-list {
+  padding-top: 89px;
+}
+
+.portfolio-list .react-tabs__tab-panel--selected {
+  animation: portfolioAppear 0.8s ease-in-out 0s 1 normal none running;
+}
+
+.portfolioAppear {
+  animation-name: portfolioAppear;
+}
+
+.portfolio-gallery {
+  list-style-type: none;
+  margin: 0 0 0 -50px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  justify-content: center;
+}
+
+.portfolio-gallery li {
+  margin: 0 0 50px;
+  padding-left: 50px;
+  flex-basis: 28%;
+  transition: all 0.3s ease;
+}
+
+.portfolio-gallery li:hover img {
+  opacity: 0.5 !important;
+  cursor: pointer;
+}
+
+.project-wrap {
+  position: relative;
+}
+
+.project-visit {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  z-index: 5;
+  visibility: hidden;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.project-visit a,
+.project-info p {
+  padding: 8px 30px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 13px;
+  border: 1px solid #000;
+  letter-spacing: 1.6px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-info p {
+  margin: 0;
+}
+
+.project-visit a:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.project-visit a:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+.portfolio-gallery li:hover .project-visit {
+  visibility: visible;
+  display: flex;
+}
+
+/* Portfolio SKills */
+.portfolio-skills {
+  padding: 150px 0;
+  opacity: 0;
+}
+
+.skills-wrap,
+.skills-wrap .right .skill,
+.skills-wrap .right .skill > span {
+  display: flex;
+}
+
+.skills-wrap .left,
+.skills-wrap .right {
+  width: 50%;
+}
+
+.skills-wrap .left {
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills-wrap .left p {
+  padding-top: 27px;
+  margin: 0;
+}
+
+.skills-wrap .right {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  padding-left: 50px;
+}
+
+.skills-wrap .right .skill {
+  flex-direction: column;
+  margin-bottom: 34px;
+}
+
+progress {
+  border-radius: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: 10px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+progress::-webkit-progress-value {
+  background-color: #000;
+}
+
+.skills-wrap .right .skill > span {
+  justify-content: space-between;
+}
+
+/* Portfolio Video Section */
+.portfolio-video-section {
+  position: relative;
+  width: 100%;
+}
+
+.video-div-bg {
+  position: absolute;
+  width: 100%;
+}
+
+.video-div-bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-div-content {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding: 150px 0;
+  z-index: 2;
+}
+
+.video-div-content .rounded {
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border-radius: 100%;
+  left: 50%;
+  transform: translate(-50%, 13%);
+  margin-bottom: 45px;
+  transition: all 1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.video-div-content .rounded::before {
+  content: "";
+  position: absolute;
+  border-color: transparent transparent transparent #000;
+  border-style: solid;
+  border-width: 13px 0px 13px 26px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 4px;
+}
+
+.video-div-content .rounded:hover {
+  cursor: pointer;
+  transform: translateX(-50%) scale3d(1.15, 1.15, 1.15);
+}
+
+.video-div-content .text {
+  color: #fff;
+  font-size: 30px;
+  max-width: 600px;
+  margin: 70px auto 50px;
+}
+.video-div-content .video-btn {
+  cursor: pointer;
+  padding: 16px 50px;
+  font-size: 16px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s cubic-bezier(0, 0, 0.1, 1);
+}
+
+.video-div-content .video-btn:hover {
+  transform: translateY(-3px);
+  color: #000;
+  background-color: #fff;
+}
+
+.video-div-bg .gatsby-image-wrapper-constrained {
+  display: block;
+}
+
+/* Responsive  */
+
+@media (max-width: 320px) {
+  .project-info p {
+    bottom: 30% !important;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 376px) {
+  .project-info p {
+    bottom: 20% !important;
+  }
+}
+
+@media (max-width: 645px) {
+  .portfolio-heading {
+    margin-bottom: 30px;
+  }
+
+  .portfolio-filter ul.react-tabs__tab-list {
+    position: relative;
+    top: 15px;
+  }
+
+  .portfolio-gallery li {
+    flex-basis: 100% !important;
+  }
+
+  .portfolio-gallery li:hover img {
+    opacity: 1 !important;
+  }
+
+  .project-info p {
+    background-color: #ddd;
+    color: #000;
+    position: absolute;
+    bottom: 17%;
+    width: -webkit-fill-available;
+    border: 0;
+  }
+
+  .project-visit {
+    visibility: visible;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+  }
+
+  .project-visit a:nth-child(1) {
+    margin: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio-skills {
+    padding: 60px 0;
+  }
+
+  .portfolio-section {
+    padding: 60px 0 40px;
+  }
+
+  .video-div-content {
+    padding: 75px 15px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .portfolio-gallery li {
+    flex-basis: 43%;
+  }
+
+  .skills-wrap {
+    flex-direction: column;
+  }
+
+  .skills-wrap .left,
+  .skills-wrap .right {
+    width: 100%;
+  }
+
+  .skills-wrap .left {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .skills-wrap .right {
+    padding-left: 0;
+  }
+}
+
+/* Animation */
+@keyframes portfolioAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

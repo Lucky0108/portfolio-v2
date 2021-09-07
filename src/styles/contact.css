@@ -1,0 +1,230 @@
+.contact-bg {
+    width: 100%;
+    height: auto;
+    padding: 220px 0 170px;
+    position: relative;
+    background-image: url("../images/cta-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-bg .shape {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: -13px;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.contact-bg .shape img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-bg .overlay {
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 3;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+}
+
+.cta-inner h3 {
+    color: #fff;
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 35px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.enquiry-btn {
+    font-size: 16px;
+    padding: 15px 48px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid#fff;
+    transition: all .5s cubic-bezier(0,0,.1,1);
+    display: inline-block;
+    font-family: "Poppins";
+    cursor: pointer;
+}
+
+.enquiry-btn:hover {
+    color: #fff;
+    background-color: transparent;
+    transform: translateY(-3px);
+}
+
+.footer-section {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-section p,.contact-modal-content p, .contact-modal-content a {
+    text-align: center;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-form-wrap {
+    display: flex;
+    padding-top: 31px;
+    margin-bottom: 50px;
+}
+
+.contact-form-wrap .left, .contact-form-wrap .right {
+    width: 50%;
+    position: relative;
+}
+
+.contact-form-wrap .left {
+    padding-right: 25px;
+}
+
+.contact-form-wrap .left form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-wrap .left form input, .contact-form-wrap .left form textarea {
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+    transition: all .3s ease;
+    font-size: 13px;
+    letter-spacing: 1.4px;
+    font-weight: 500;
+}
+
+.contact-form-wrap .left form input:focus, .contact-form-wrap .left form textarea:focus {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .5);
+}
+
+.contact-submit-btn {
+    padding: 15px 48px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    border: 0;
+    cursor: pointer;
+}
+
+.contact-form-wrap .right {
+    padding-left: 25px;
+}
+
+.contact-modal-content .short-info > ul, .contact-social  {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.contact-modal-content .short-info > ul {
+    margin: 0 0 0 -50px;
+}
+
+.contact-modal-content .short-info > ul > li {
+    margin: 0 0 30px;
+    width: 33.333%;
+    float: left;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.contact-modal-content .short-info > ul > li .list-inner {
+    padding: 50px 15px;
+    background-color: #000;
+    color: #fff;
+}
+
+.contact-modal-content .short-info > ul > li .list-inner > svg {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 12px;
+}
+
+.contact-modal-content a {
+    color: #fff;
+}
+
+.contact-social {
+    justify-content: center;
+}
+
+.contact-social li {
+    margin: 0 15px 0 0;
+}
+
+.contact-social li:last-child {
+    margin: 0;
+}
+
+@media (max-width:767px) {
+    .contact-bg {
+        padding: 150px 0;
+    }
+
+    .enquiry-btn {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .cta-inner h3 {
+        font-size: 50px;
+        line-height: 1.2;
+    }
+
+    .contact-bg .shape {
+        top: -16px;
+    }
+
+    .contact-form-wrap {
+        flex-direction: column;
+    }
+
+    .contact-form-wrap .left, .contact-form-wrap .right {
+        width: 100%;
+    }
+
+    .contact-form-wrap .left {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .contact-form-wrap .right {
+        padding-left: 0;
+    }
+
+    .contact-modal-content .short-info > ul {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .contact-modal-content .short-info > ul > li {
+        padding-left: 0;
+        width: 100%;
+    }
+}
