@@ -175,6 +175,10 @@ progress::-webkit-progress-value {
   background-color: #000;
 }
 
+::-moz-progress-bar {
+  background-color: #000;
+}
+
 .skills-wrap .right .skill > span {
   justify-content: space-between;
 }
